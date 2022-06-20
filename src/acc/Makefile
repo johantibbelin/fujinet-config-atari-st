@@ -1,6 +1,6 @@
 LIBCMINI = /opt/libcmini
 CC=m68k-atari-mint-gcc
-CFLAGS=-nostdlib $LIBCMINI/startup.o -I$(LIBCMINI)
+CFLAGS=-nostdlib $(LIBCMINI)/startup.o -I$(LIBCMINI)/include
 
 ODIR=.
 LDIR =$(LIBCMINI)/lib
@@ -18,7 +18,7 @@ $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 fnconfig.acc: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+	$(CC) -o $@ $^ $(CFLAGS) -L$(LDIR) $(LIBS)
 
 .PHONY: clean
 
