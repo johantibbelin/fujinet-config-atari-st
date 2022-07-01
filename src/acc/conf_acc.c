@@ -1,5 +1,7 @@
 /**
 * Fujinet config desk ACC for the Atari ST
+*
+*  Plan: Get it to work as a .prg as well (Auto folder)
 */
 #include <osbind.h>
 #include <gem.h>
