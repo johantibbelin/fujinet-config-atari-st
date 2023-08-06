@@ -3,6 +3,7 @@
 *
 *  Plan: Get it to work as a .prg as well (Auto folder)
 */
+/*Todo: check why it bombs*/
 #include <osbind.h>
 #include <gem.h>
 #include <stdio.h>
